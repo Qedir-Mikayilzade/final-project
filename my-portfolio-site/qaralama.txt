@@ -1,0 +1,1056 @@
+@media (min-width: 601px) and (max-width: 991px){
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito";
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; /*Chrome, Safari ve Opera ucun*/
+  }
+  
+  body {
+    -ms-overflow-style: none; /* Edge ucun */
+    scrollbar-width: none; /* Firefox ucun */
+    width: 100%;
+  }
+  
+  header {
+    position: relative;
+    z-index: 999;
+    width:100%;
+  }
+
+  nav {
+    position: fixed;
+    width: 100%;
+    height: 12vh;
+    min-height: 70px;
+    background-color: black;
+    box-shadow: 2px 2px 8px gray;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .head {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding-left:10px ;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  nav h1 {
+    margin-left: 10px;
+    width: fit-content;
+  }
+  
+  .logo-name {
+    cursor: pointer;
+    transition: 0.25s;
+  }
+  
+  .logo-name:hover {
+    color: red;
+  }
+  
+  select{
+    color: white;
+    background-color: black;
+    border: 1px solid rgb(68, 68, 68);
+    border-radius: 6px;
+    padding: 4px 6px;
+    outline: none;
+  }
+  
+ 
+  /*DARK MOD*/
+  /* body {
+    transition: background-color 0.3s ease;
+  }
+  
+  .dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .toggleBtn {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .change-mode-icon {
+    width: 100%;
+  } */
+  
+  /*Dark mod*/
+  
+  nav .tabs {
+    display: flex;
+    gap: 20px;
+    margin-right: 10px;
+  }
+  
+  .tab-title {
+    padding: 8px;
+    font-weight: 500;
+    border-radius: 12px;
+    transition: 0.4s ease;
+  }
+  
+  .tab-title:hover {
+    -webkit-box-reflect: below 1px linear-gradient(transaprent, #0005);
+    box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 25px #03e9f4,
+      0 0 100px #03e9f4;
+  }
+  
+  .tab-title a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  main {
+    width: 100%;
+    position: absolute;
+    top: 12vh;
+  }
+  
+  section {
+    padding-top: 50px;
+    width: 100%;
+    height: fit-content;
+  }
+  
+  section h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+  }
+  
+  #home {
+    width: 100%;
+    height: 350px;
+    padding: 20px 10px;
+    background-image: url("./images/workplace-with-smartphone-laptop-black-table-top-view-copyspace-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: rgba(48, 46, 46, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .home-text {
+    margin: auto;
+    height: 70%;
+    word-wrap: wrap;
+    font-weight: 300;
+    font-size: 16px;
+    padding: 15px;
+    background: black;
+    opacity: 70%;
+    color: white;
+    border-radius: 16px;
+  }
+  
+  #about {
+    height: 520px;
+    background: black;
+    color: white;
+    padding-top: 20px;
+  }
+  
+  .informations {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-left-col {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .info-right-col {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+  }
+  
+  .info-left-col a {
+    
+    margin: 20px auto;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    width: 240px;
+    height: 50px;
+    overflow: hidden;
+    background: transparent;
+    border: 1px solid rgb(255, 166, 0);
+    border-radius: 32px;
+    color: white;
+    transition: 0.3s ease;
+  }
+  
+  .info-left-col a:hover {
+    background: rgb(255, 166, 0);
+    -webkit-box-reflect: below 1px linear-gradient(transaprent, #0005);
+    box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 25px #03e9f4,
+      0 0 100px #03e9f4;
+  }
+  .about-tabs {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    gap: 4px;
+  }
+  
+  .about-tab {
+    width: 30%;
+    font-size: 1.5rem;
+    position: relative;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .about-tab::after {
+    position: absolute;
+    content: "";
+    background: rgb(255, 166, 0);
+    width: 0%;
+    height: 3px;
+    transition: 0.7s;
+    left: 0;
+    bottom: -6px;
+  }
+  
+  .about-tab:hover::after {
+    width: 80%;
+  }
+  
+  .about-tab.about-active-tab::after {
+    width: 80%;
+  }
+  
+  .about-contents {
+    margin-top: 40px;
+    width: 100%;
+  }
+  
+  .about-content {
+    width: 100%;
+  }
+  
+  .personal-info-content-div {
+    display: flex;
+    font-size: 23px;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .personal-info-col {
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .informations-skills-contents {
+    display: none;
+    width: 100%;
+  }
+  
+  .skills-content-div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .skill-col {
+    margin-right: 50px;
+  }
+  
+  .informations-education-contents {
+    display: none;
+  }
+  
+  #projects {
+    background-image: url("./images/laptop-cup-coffee.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #projects h1 {
+    text-align: center;
+    font-size: 50px;
+  }
+  
+  #projects .proj-slider {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 16px;
+    background: rgb(0, 0, 0, 0.6);
+    padding: 4vh 0;
+    gap: 50px;
+  }
+  
+  .slides {
+    top: 30px;
+    display: flex;
+    gap: 100px;
+    position: relative;
+    left: 425px;
+    transition: 0.5s all ease;
+  }
+  
+  .slide {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .slide {
+    /* position: absolute; */
+    left: 170px;
+  }
+  
+  .slide .site-img {
+    width: 100%;
+    border: 3px solid rgb(255, 166, 0);
+    border-radius: 12px;
+    transition: transform 0.5s;
+  }
+  
+  .slide .site-img:hover {
+    transform: scale(1.06);
+  }
+  
+  .link-buttons {
+    display: flex;
+    gap: 4px;
+    padding-top: 12px;
+    padding-left: 12px;
+  }
+  
+  .link-buttons img {
+    height: 40px;
+    width: 50px;
+    border-radius: 6px;
+    padding: 4px 12px;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+    background-color: aliceblue;
+  }
+  
+  .link-button {
+    cursor: pointer;
+  }
+  
+  .slider-buttons {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .slider-buttons button {
+    width: 40px;
+    height: 30px;
+    padding: 6px;
+    border-radius: 4px;
+  }
+  
+  .slider-buttons button img {
+    width: 80%;
+    height: 80%;
+  }
+  
+  .see-more {
+    background-color: rgba(0, 0, 0, 0.5);
+    align-self: center;
+    width: fit-content;
+    margin-top: 12px;
+    padding: 10px 24px;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 22px;
+    transition: 0.3s;
+  }
+  
+  .see-more:hover {
+    box-shadow: 2px 2px 2px 12px solid red;
+    transform: scale(1.09);
+    background-color: rgb(255, 166, 0);
+    font-weight: 900;
+  }
+  
+  #contact {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+  }
+  
+  .contact-columns {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-left-column {
+    width: 80%;
+  }
+  
+  #name ,#email , #message{
+    background-color: rgb(40, 38, 38);
+    padding: 8px 18px;
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    outline: none;
+    font-size: 18px;
+    color: white;
+  }
+  
+  #message{
+    resize: none;
+  }
+  
+  .submit-button{
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    width: 240px;
+    height: 50px;
+    overflow: hidden;
+    background: transparent;
+    border: 1px solid rgb(255, 166, 0);
+    border-radius: 32px;
+    color: white;
+    transition: 0.3s ease;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background: rgb(255, 166, 0);
+    -webkit-box-reflect: below 1px linear-gradient(transaprent, #0005);
+    box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 25px #03e9f4,
+      0 0 100px #03e9f4;
+  }
+  
+  .diviser {
+    height: 0px;
+    width: 80%;
+    border: 1px solid rgb(61, 60, 60);
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .contact-right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 85%;
+    gap: 20px;
+    margin: auto;
+  }
+  
+  .contact-column {
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 3vw 4vh;
+  }
+  
+  .every-contact{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  
+  .every-contact-div {
+    display: flex;
+    cursor: pointer;
+  }
+  
+  .every-contact-div p {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .every-contact-div a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .contact-icon {
+    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+  }
+  
+} 
+
+
+
+@media (min-width: 300px) and (max-width: 600px){
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito";
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    width: 100%;
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; /*Chrome, Safari ve Opera ucun*/
+  }
+  
+  body {
+    -ms-overflow-style: none; /* Edge ucun */
+    scrollbar-width: none; /* Firefox ucun */
+    width: 100%;
+  }
+  
+  header {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+  }
+
+  nav {
+    position: relative;
+    width: 100%;
+    height: 12vh;
+    min-height: 70px;
+    background-color: black;
+    box-shadow: 2px 2px 8px gray;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .head {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  nav h1 {
+    margin-left: 20px;
+  }
+  
+  .logo-name {
+    cursor: pointer;
+    transition: 0.25s;
+  }
+  
+  .logo-name:hover {
+    color: red;
+  }
+  
+  select{
+    color: white;
+    background-color: black;
+    border: 1px solid rgb(68, 68, 68);
+    border-radius: 6px;
+    padding: 6px 10px;
+    outline: none;
+    margin-right:20px ;
+  }
+  
+ 
+  /*DARK MOD*/
+  /* body {
+    transition: background-color 0.3s ease;
+  }
+  
+  .dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .toggleBtn {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .change-mode-icon {
+    width: 100%;
+  } */
+  
+  /*Dark mod*/
+  
+  .tabs {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  
+  .tab-title {
+    padding: 8px;
+    font-weight: 500;
+    border-radius: 12px;
+    transition: 0.4s ease;
+  }
+  
+  .tab-title:hover {
+    -webkit-box-reflect: below 1px linear-gradient(transaprent, #0005);
+    box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 25px #03e9f4,
+      0 0 100px #03e9f4;
+  }
+  
+  .tab-title a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  main {
+    width: 100%;
+    position: absolute;
+    top: 12vh;
+  }
+  
+  section {
+    padding-top: 70px;
+    width: 100%;
+  }
+  
+  section h1 {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 0px;
+  }
+  
+  #home {
+    height: 70vh;
+    padding: 3vh 2vw 4vh;
+    background-image: url("./images/workplace-with-smartphone-laptop-black-table-top-view-copyspace-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: rgba(48, 46, 46, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .home-text {
+    font-weight: 500;
+    font-size: 20px;
+    padding: 35px;
+    background: black;
+    opacity: 70%;
+    color: white;
+    border-radius: 16px;
+  }
+  
+  #about {
+    height: 520px;
+    background: black;
+    color: white;
+    padding-top: 20px;
+  }
+  
+  .informations {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .info-left-col {
+    padding-left: 4vw;
+    padding-right: 4vw;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid gray;
+  }
+  
+  .info-right-col {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+  }
+  
+  .info-left-col a {
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    width: 240px;
+    height: 50px;
+    overflow: hidden;
+    background: transparent;
+    border: 1px solid rgb(255, 166, 0);
+    border-radius: 32px;
+    color: white;
+    transition: 0.3s ease;
+  }
+  
+  .info-left-col a:hover {
+    background: rgb(255, 166, 0);
+    -webkit-box-reflect: below 1px linear-gradient(transaprent, #0005);
+    box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 25px #03e9f4,
+      0 0 100px #03e9f4;
+  }
+  .about-tabs {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    gap: 4px;
+  }
+  
+  .about-tab {
+    width: 30%;
+    font-size: 1.5rem;
+    position: relative;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .about-tab::after {
+    position: absolute;
+    content: "";
+    background: rgb(255, 166, 0);
+    width: 0%;
+    height: 3px;
+    transition: 0.7s;
+    left: 0;
+    bottom: -6px;
+  }
+  
+  .about-tab:hover::after {
+    width: 80%;
+  }
+  
+  .about-tab.about-active-tab::after {
+    width: 80%;
+  }
+  
+  .about-contents {
+    margin-top: 40px;
+    width: 100%;
+  }
+  
+  .about-content {
+    width: 100%;
+  }
+  
+  .personal-info-content-div {
+    display: flex;
+    font-size: 23px;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .personal-info-col {
+    width: 100%;
+  }
+  
+  .informations-skills-contents {
+    display: none;
+    width: 100%;
+  }
+  
+  .skills-content-div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .skill-col {
+    margin-right: 50px;
+  }
+  
+  .informations-education-contents {
+    display: none;
+  }
+  
+  #projects {
+    background-image: url("./images/laptop-cup-coffee.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #projects h1 {
+    text-align: center;
+    font-size: 50px;
+  }
+  
+  #projects .proj-slider {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 16px;
+    background: rgb(0, 0, 0, 0.6);
+    padding: 4vh 0;
+    gap: 50px;
+  }
+  
+  .slides {
+    top: 30px;
+    display: flex;
+    gap: 100px;
+    position: relative;
+    left: 425px;
+    transition: 0.5s all ease;
+  }
+  
+  .slide {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .slide {
+    /* position: absolute; */
+    left: 170px;
+  }
+  
+  .slide .site-img {
+    width: 100%;
+    border: 3px solid rgb(255, 166, 0);
+    border-radius: 12px;
+    transition: transform 0.5s;
+  }
+  
+  .slide .site-img:hover {
+    transform: scale(1.06);
+  }
+  
+  .link-buttons {
+    display: flex;
+    gap: 4px;
+    padding-top: 12px;
+    padding-left: 12px;
+  }
+  
+  .link-buttons img {
+    height: 40px;
+    width: 50px;
+    border-radius: 6px;
+    padding: 4px 12px;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+    background-color: aliceblue;
+  }
+  
+  .link-button {
+    cursor: pointer;
+  }
+  
+  .slider-buttons {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .slider-buttons button {
+    width: 40px;
+    height: 30px;
+    padding: 6px;
+    border-radius: 4px;
+  }
+  
+  .slider-buttons button img {
+    width: 80%;
+    height: 80%;
+  }
+  
+  .see-more {
+    background-color: rgba(0, 0, 0, 0.5);
+    align-self: center;
+    width: fit-content;
+    margin-top: 12px;
+    padding: 10px 24px;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 22px;
+    transition: 0.3s;
+  }
+  
+  .see-more:hover {
+    box-shadow: 2px 2px 2px 12px solid red;
+    transform: scale(1.09);
+    background-color: rgb(255, 166, 0);
+    font-weight: 900;
+  }
+  
+  #contact {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+  }
+  
+  .contact-columns {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+  }
+  
+  .contact-left-column {
+    width: 30%;
+  }
+  
+  #name ,#email , #message{
+    background-color: rgb(40, 38, 38);
+    padding: 8px 18px;
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    outline: none;
+    font-size: 18px;
+    color: white;
+  }
+  
+  #message{
+    resize: none;
+  }
+  
+  .submit-button{
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    width: 240px;
+    height: 50px;
+    overflow: hidden;
+    background: transparent;
+    border: 1px solid rgb(255, 166, 0);
+    border-radius: 32px;
+    color: white;
+    transition: 0.3s ease;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background: rgb(255, 166, 0);
+    -webkit-box-reflect: below 1px linear-gradient(transaprent, #0005);
+    box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 25px #03e9f4,
+      0 0 100px #03e9f4;
+  }
+  
+  .diviser {
+    height: 350px;
+    border: 1px solid rgb(61, 60, 60);
+  }
+  
+  .contact-right-column {
+    width: 70%;
+    gap: 20px;
+  }
+  
+  .contact-column {
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 3vw 4vh;
+  }
+  
+  .every-contact{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  
+  .every-contact-div {
+    display: flex;
+    cursor: pointer;
+  }
+  
+  .every-contact-div p {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .every-contact-div a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .contact-icon {
+    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+  }
+  
+} 
